@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ion-icon {
+    font-size: 24px;
+    color: #232833;
+}
+a {
+    text-decoration: none;
+    color: #232833;
+}
+.hide__element, .contact__mobile, .divider.small, .divider.medium, .hobbies.medium {
+    display: none;
+}
+header {
+    width: 100%;
+    height: 240px;
+    background: #232833;
+    position: relative;
+}
+.contact {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact .left-side,.contact .right-side {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+.contact .contact__info {
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+.contact .contact__info:hover {
+    transform: scale(1.1);
+}
+.profile {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 90px);
+    border-radius: 50%;
+    background: #232833;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile h2 {
+    position: absolute;
+    font-size: 1.1em;
+    text-align: center;
+    color: #fff;
+    top: 185px;
+    line-height: 1.1em;
+    width: 500px;
+    z-index: 200;
+}
+.profile h2 span {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: lightblue;
+}
+.container {
+    width: 100%;
+    margin: 10px 0;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+}
+.container .left-Side {
+    background: #232833;
+    padding: 30px;
+}
+.container .right-Side {
+    background: #fff;
+    padding: 30px;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background: #1877F2;
+    margin: 20px 0;
+}
+
+.left-Side .title{
+    color: #fff;
+    padding-bottom: 20px;
+}
+.left-Side li {
+    color: #fff;
+    padding-bottom: 15px;
+    margin-left: 20px;
+}
+.education li h5 {
+    color: lightblue;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.education li h4:nth-child(2) {
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 500;
+}
+.education li h4 {
+    color: #fff;
+    margin-left: 20px;
+    font-weight: 300;
+}
+.right-Side .title {
+    padding-bottom: 20px;
+}
+.right-Side li {
+    padding-bottom: 15px;
+    margin-left: 20px;
+}
+.right-Side li h4{
+    font-weight: 500;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.right-Side li h5 {
+    font-weight: 500;
+    padding-bottom: 3px;
+    margin-left: 20px;
+}
+.experience li p {
+    font-size: .9em;
+    margin-left: 40px;
+    padding: 3px 0;
+}
+.experience li p a {
+    text-decoration: underline;
+    color: #1877F2;
+}
+.react-library {
+    margin-left: 30px;
+}
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .75em;
+    color: #fff;
+    background: #232833;
+}
+
+@media only screen and (max-width: 1200px) {
+    .profile {
+        left: 80px;
+    }
+    .contact {
+        height: 140px;
+        top: 30px;
+        padding-left: 300px;
+    }
+    .contact .left-side,.contact .right-side {
+        display: inline-block;
+        width: 100%;
+    }
+    .contact__info {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .profile {
+        left: 20px;
+    }
+    .contact {
+        padding-left: 230px;
+    }
+    .contact__info {
+        gap: 10px;
+    }
+    .divider {
+        margin: 10px 0;
+    }
+    .hobbies, .divider.large {
+        display: none;
+    }
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hobbies.medium, .divider.medium {
+        display: block;
+    }
+}
+@media only screen and (max-width: 768px) {
+    header {
+        height: 200px;
+    }
+    .profile {
+        width: 140px;
+        height: 140px;
+        left: calc(50% - 70px);
+    }
+    .profile h2 {
+        top: 145px;
+    }
+    .contact {
+        display: none;
+    }
+    .contact__mobile, .divider.small {
+        display: block;
+    }
+    .contact__mobile li {
+        padding-bottom: 15px;
+        margin-left: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .contact__mobile li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    ion-icon {
+        font-size: 16px;
+        color: #fff;
+    }
+    .right-Side li h5 {
+        margin-left: 10px;
+    }
+    .right-Side li p {
+        margin-left: 20px;
+    }
+    .react-library {
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .container .left-Side, .container .right-Side {
+        padding: 10px;
+    }
+    .container .title {
+        font-size: 1em;
+        padding-bottom: 10px;
+    }
+    .container li {
+        padding-bottom: 7px;
+        font-size: .75em;
+    }
+}

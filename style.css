@@ -279,3 +279,24 @@ footer {
         font-size: .75em;
     }
 }
+
+@media print {
+    .profile {
+        left: 80px;
+    }
+    .contact {
+        height: 140px;
+        top: 30px;
+        padding-left: 300px;
+    }
+    .contact .left-side,.contact .right-side {
+        display: inline-block;
+        width: 100%;
+    }
+    .contact__info {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 5px 0;
+    }    
+}
